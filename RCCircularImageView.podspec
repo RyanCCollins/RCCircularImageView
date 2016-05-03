@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RCCircularImageView"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.summary      = "A simple circular image view for avatars made in Swift 2.2."
 
   # This description is used to generate tags and improve search results.
@@ -25,6 +25,8 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                    I wrote this pod because I was tired of having to create circular image views for avatars,
+                    a task that I have to do for _every_ app.
                    DESC
 
   s.homepage     = "http://github.com/ryanccollins/RCCircularImageView"
@@ -91,7 +93,6 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "RCCircularImageView", "RCCircularImageView/**/*.{swift}"
-  s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
