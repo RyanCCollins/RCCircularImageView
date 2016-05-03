@@ -1,20 +1,14 @@
-//
-//  CircularImageView.swift
-//  hacksmiths
-//
-//  Created by Ryan Collins on 5/2/16.
-//  Copyright © 2016 Tech Rapport. All rights reserved.
-//
+/* RCCircularImageView.swift
+ * A simple library for creating
+ * circular images for avatars
+ *
+ *
+ */
 
 import UIKit
 @IBDesignable
 
 
-
-/* RCCircularImageView
- * A simple IBDesignable Circular ImageView
- * Useful for creating avatar photos
- */
 class RCCircularImageView: UIView {
     
     var backgroundLayer: CAShapeLayer!
@@ -32,7 +26,8 @@ class RCCircularImageView: UIView {
         setImage()
     }
     
-    func setBackgroundLayer() {
+    // Set background layer, providing a border
+    private func setBackgroundLayer() {
         if backgroundLayer == nil {
             backgroundLayer = CAShapeLayer()
             layer.addSublayer(backgroundLayer)
@@ -45,8 +40,8 @@ class RCCircularImageView: UIView {
         backgroundLayer.frame = layer.bounds
     }
     
-    func setBackgroundImageLayer() {
-        
+    // Set / create the background image layer
+    private func setBackgroundImageLayer() {
         if imageLayer == nil {
             let mask = CAShapeLayer()
             let dx = lineWidth + 3.0
@@ -64,15 +59,12 @@ class RCCircularImageView: UIView {
         
     }
     
-    func setImage() {
+    // Set the image for the image view when created
+    private func setImage() {
         if imageLayer != nil {
-  
             if let anImage = image {
                 imageLayer.contents = anImage.CGImage
             }
-
         }
-        
     }
-    
 }
